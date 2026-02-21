@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manoj DevOps Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        /* Navbar */
+
+        nav {
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(to right, #0f172a, #1e293b);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            background: #38bdf8;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: #0ea5e9;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 80px 50px;
+        }
+
+        .section-title {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #38bdf8;
+            text-align: center;
+        }
+
+        /* About */
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #cbd5e1;
+        }
+
+        /* Services */
+
+        .services {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            width: 250px;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #334155;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+
+        .contact {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+
+        @media(max-width:768px) {
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <h2>Manoj</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero" id="home">
+
+        <h1>Hello, I'm <span>Manoj</span></h1>
+
+        <p>DevOps Engineer | AWS | Kubernetes | Terraform</p>
+
+        <button class="btn" onclick="showMessage()">Hire Me</button>
+
+    </section>
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+
+            <p>
+
+                I am a DevOps Engineer with experience in AWS, Docker, Kubernetes,
+                Terraform, Jenkins and CI/CD pipeline automation.
+
+                I build scalable, secure and automated cloud infrastructure.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Services -->
+
+    <section id="services">
+
+        <h2 class="section-title">Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>AWS Cloud</h3>
+                <p>EC2, S3, IAM, VPC, EKS setup and automation.</p>
+            </div>
+
+            <div class="card">
+                <h3>CI/CD</h3>
+                <p>Jenkins pipeline setup and automation.</p>
+            </div>
+
+            <div class="card">
+                <h3>Kubernetes</h3>
+                <p>Cluster setup, deployment and monitoring.</p>
+            </div>
+
+            <div class="card">
+                <h3>Terraform</h3>
+                <p>Infrastructure as Code automation.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact">
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Your Email">
+
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button class="btn" onclick="sendMessage()">Send Message</button>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 Manoj DevOps Engineer | All Rights Reserved
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script>
+
+        function showMessage() {
+            alert("Thanks for visiting Manoj's website!");
+        }
+
+        function sendMessage() {
+            alert("Message sent successfully!");
+        }
+
+    </script>
+
+</body>
+</html>
