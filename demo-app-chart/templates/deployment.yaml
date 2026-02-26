@@ -29,8 +29,10 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
 
           ports:
-            - containerPort: 80
-
+            - name: http
+              containerPort: 80
+              protocol: TCP
+            
           resources:
             requests:
               cpu: 100m
